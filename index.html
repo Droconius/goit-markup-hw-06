@@ -64,14 +64,16 @@
           <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу
             отримати вичерпні відомості про компанію чи приватну особу.</p>
           <button data-modal-close class="button-modal-close">
-            <img src=" ./images/close.svg" alt="close" width="16">
+            <svg class="close-svg">
+              <use href="./images/symbol-defs.svg#close"></use>
+            </svg>
           </button>
         </div>
       </div>
     </section>
 
     <!-- What do we do -->
-    <section class="section-whatdowedo">
+    <section class=" section-whatdowedo">
 
       <div class="container whatdowedo">
         <h2 class="visually-hidden">what-main</h2>
@@ -83,7 +85,8 @@
               </svg>
             </div>
             <h3 class="what-title">Увага до деталей</h3>
-            <p class="what-text">Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p>
+            <p class="what-text">Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.
+            </p>
           </li>
 
           <li class="what-list icon-clock">
@@ -93,7 +96,8 @@
               </svg>
             </div>
             <h3 class="what-title">Пунктуальність</h3>
-            <p class="what-text">Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</p>
+            <p class="what-text">Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.
+            </p>
           </li>
 
           <li class="what-list icon-diagram">
@@ -113,7 +117,8 @@
               </svg>
             </div>
             <h3 class="what-title">Сучасні технології</h3>
-            <p class="what-text">Значимість цих проблем настільки очевидна, що реалізація планових завдань.</p>
+            <p class="what-text">Значимість цих проблем настільки очевидна, що реалізація планових завдань.
+            </p>
           </li>
         </ul>
       </div>
@@ -355,7 +360,7 @@
 
   <!-- Footer -->
   <footer class="footer">
-
+    <!-- Contacts -->
     <div class="container footer-cont">
       <div class="footer-contacts">
         <a href="#" class="footer-logo" id="contacts">Web<span class="logostudio-footer">Studio</span></a>
@@ -370,6 +375,8 @@
           <li><a href="tel:+380961111111" class="footer-link-dop">+38 096 111 11 11</a></li>
         </ul>
       </div>
+
+      <!-- Social networks -->
       <div class="footer-sn">
         <p class="footer-sn-title">приєднуйтесь</p>
         <ul class="footer-sn-ul">
@@ -403,6 +410,24 @@
           </li>
         </ul>
       </div>
+
+      <!-- Subscribe forms -->
+      <div class="footer-subscribe">
+        <p class="footer-subscribe-title">Підпишіться на розсилку</p>
+        <div class="footer-subscribe-form">
+          <form name="subscribe-form" autocomplete="on" novalidate class="subscribe-form">
+            <input type="email" name="email" placeholder="E-mail" />
+          </form>
+          <button type="button" class="subscribe">
+            Підписатися
+            <svg class="subscribe-svg">
+              <use href="./images/symbol-defs.svg#telegram"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
     </div>
 
   </footer>
