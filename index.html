@@ -59,10 +59,31 @@
         <h1 class="slogan-text">Ефективні рішення для вашого бізнесу</h1>
         <button type="button" class="order" data-modal-open>Замовити послугу</button>
       </div>
+
+      <!-- Modal window -->
       <div class="backdrop is-hidden" data-backdrop>
         <div class="modal is-hidden" data-modal>
-          <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу
-            отримати вичерпні відомості про компанію чи приватну особу.</p>
+          <form class="modal-form">
+            <fieldset class="modal-form-group">
+              <legend class="modal-group-title">Залиште свої дані, ми вам передзвонимо</legend>
+              <label class="modal-form-label">
+                Ім'я
+                <input type="text" name="username" />
+              </label>
+              <label class="modal-form-label">
+                Телефон
+                <input type="phone" name="phone" />
+              </label>
+              <label class="modal-form-label">
+                Пошта
+                <input type="email" name="email" />
+              </label>
+              <label class="modal-form-label">
+                Коментар
+                <textarea name="feedback" rows="5" placeholder="Введіть текст" class="commets"></textarea>
+              </label>
+            </fieldset>
+          </form>
           <button data-modal-close class="button-modal-close">
             <svg class="close-svg">
               <use href="./images/symbol-defs.svg#close"></use>
