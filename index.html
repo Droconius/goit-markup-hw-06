@@ -67,22 +67,50 @@
             <fieldset class="modal-form-group">
               <legend class="modal-group-title">Залиште свої дані, ми вам передзвонимо</legend>
               <label class="modal-form-label">
-                Ім'я
-                <input type="text" name="username" />
+                <input type="text" name="username" placeholder=" " class="modal-form-input" />
+                <span class="modal-form-text">Ім'я</span>
+                <span class="modal-form-icon">
+                  <svg class="form-svg">
+                    <use href="./images/symbol-defs.svg#name"></use>
+                  </svg>
+                </span>
               </label>
               <label class="modal-form-label">
-                Телефон
-                <input type="phone" name="phone" />
+                <input type="text" name="phone" placeholder=" " class="modal-form-input" />
+                <span class="modal-form-text">Телефон</span>
+                <span class="modal-form-icon">
+                  <svg class="form-svg">
+                    <use href="./images/symbol-defs.svg#phone"></use>
+                  </svg>
+                </span>
               </label>
               <label class="modal-form-label">
-                Пошта
-                <input type="email" name="email" />
+                <input type="text" name="email" placeholder=" " class="modal-form-input" />
+                <span class="modal-form-text">Пошта</span>
+                <span class="modal-form-icon">
+                  <svg class="form-svg">
+                    <use href="./images/symbol-defs.svg#email"></use>
+                  </svg>
+                </span>
               </label>
-              <label class="modal-form-label">
-                Коментар
-                <textarea name="feedback" rows="5" placeholder="Введіть текст" class="commets"></textarea>
+              <label class="modal-form-label-comment">
+                <textarea name="feedback" rows="5" placeholder="Введіть текст" class="modal-form-commets"></textarea>
+                <span class="modal-form-comment">Коментар</span>
+              </label>
+              <label class="modal-form-checkbox">
+                <input type="checkbox" name="conditions" value="conditions" class="checkbox" />
+                <span class="modal-form-checkbox-icon">
+                  <svg class="form-checkbox-svg">
+                    <use href="./images/symbol-defs.svg#checkbox"></use>
+                  </svg>
+                </span>
+                <span class="modal-form-checkbox-text">Погоджуюся з розсилкою та приймаю
+                  <a href="#" class="modal-form-checkbox-text-active">Умови договору</a></span>
               </label>
             </fieldset>
+            <button type="submit" class="send">
+              Відправити
+            </button>
           </form>
           <button data-modal-close class="button-modal-close">
             <svg class="close-svg">
@@ -439,7 +467,7 @@
           <form name="subscribe-form" autocomplete="on" novalidate class="subscribe-form">
             <input type="email" name="email" placeholder="E-mail" />
           </form>
-          <button type="button" class="subscribe">
+          <button type="submit" class="subscribe">
             Підписатися
             <svg class="subscribe-svg">
               <use href="./images/symbol-defs.svg#telegram"></use>

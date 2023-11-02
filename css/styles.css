@@ -260,7 +260,7 @@ img {
   width: 500px;
   height: 580px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   background-color: var(--color-fff);
   padding: 40px;
@@ -297,8 +297,7 @@ img {
 .modal-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  width: 450px;
+  align-items: center;
 }
 
 .modal-form-group {
@@ -318,21 +317,183 @@ img {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.6px;
+  margin-bottom: 30px;
+}
+
+.modal-form-input {
+  display: block;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  padding-left: 40px;
+  transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-label {
+  position: relative;
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  margin-bottom: 30px;
+  color: var(--color-title);
 }
-.commets {
+
+.modal-form-text {
+  position: absolute;
+  top: -50%;
+  left: 0px;
+  color: var(--color-text);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.12px;
+}
+
+.modal-form-icon {
+  position: absolute;
+  top: 25%;
+  left: 12px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.modal-form-label:focus-within > .modal-form-input {
+  border-radius: 4px;
+  outline-color: var(--color-link);
+}
+
+.modal-form-label:focus-within > .modal-form-icon {
+  color: var(--color-link);
+}
+
+.modal-form-label-comment {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin-bottom: 20px;
+  color: var(--color-title);
+}
+
+.modal-form-commets {
+  display: block;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  padding: 12px 16px;
   resize: none;
+  color: rgba(117, 117, 117, 0.5);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-comment {
+  position: absolute;
+  top: -20px;
+  left: 0px;
+  color: var(--color-text);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.12px;
+}
+
+.modal-form-label-comment:focus-within > .modal-form-commets {
+  border-radius: 4px;
+  outline-color: var(--color-link);
 }
 
 .modal-form-field {
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+.modal-form-checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.modal-form-checkbox-text {
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: 0.42px;
+  margin-left: 8px;
+}
+
+.modal-form-checkbox-text-active {
+  color: var(--color-link);
+  text-decoration-line: underline;
+}
+
+.modal-form-checkbox-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  color: var(--color-fff);
+  border: 1.5px solid var(--color-title);
+  border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-checkbox-svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.checkbox:checked + .modal-form-checkbox-icon {
+  color: var(--color-fff);
+  background-color: var(--color-link);
+  border-color: transparent;
+}
+
+.send {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  background-color: var(--color-link);
+  color: var(--color-fff);
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.96px;
+  padding: 10px 0;
+  cursor: pointer;
 }
 
 .whatdowedo {
@@ -354,7 +515,6 @@ img {
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
