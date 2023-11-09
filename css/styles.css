@@ -61,6 +61,10 @@ img {
   margin: 0 auto;
 }
 
+/***********************************
+HEADER 
+***********************************/
+
 .header {
   border-bottom: 1px solid var(--border-top-color);
 }
@@ -175,6 +179,10 @@ img {
 .contacts-link:focus {
   color: var(--color-link);
 }
+
+/***********************************
+MAIN
+***********************************/
 
 .slogan {
   text-align: center;
@@ -882,6 +890,10 @@ img {
 .card-portf:focus .card-overlay {
   transform: translateY(0);
 }
+
+/***********************************
+FOOTER
+***********************************/
 
 .footer {
   background-color: var(--color-slogan);
